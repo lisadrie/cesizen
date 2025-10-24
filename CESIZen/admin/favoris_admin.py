@@ -5,5 +5,5 @@ from ..models.favoris import FavoriteAnecdote
 class FavoriteAnecdoteAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'anecdote', 'created_at')
     list_filter = ('created_at',)
-    search_fields = ('user__username', 'anecdote__content')
+    search_fields = ('user__pseudo', 'anecdote__content')
     ordering = ('-created_at',)

@@ -13,4 +13,4 @@ class FavoriteAnecdote(models.Model):
         unique_together = ('user', 'anecdote') 
 
     def __str__(self):
-        return f"{self.user.username} - {self.anecdote.get_type_display()}"
+        return f"{self.user.pseudo} - {self.anecdote.get_type_display()}"

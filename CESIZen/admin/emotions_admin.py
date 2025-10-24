@@ -5,5 +5,5 @@ from ..models.emotions import Emotion
 class EmotionAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'emotion', 'intensity', 'created_at')
     list_filter = ('emotion', 'intensity', 'created_at')
-    search_fields = ('user__username',)
+    search_fields = ('user__pseudo',)
     ordering = ('-created_at',)

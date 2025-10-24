@@ -25,4 +25,4 @@ class Emotion(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return f"{self.user.username} - {self.get_emotion_display()} ({self.intensity})"
+        return f"{self.user.pseudo} - {self.get_emotion_display()} ({self.intensity})"
